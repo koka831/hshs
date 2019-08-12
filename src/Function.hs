@@ -1,3 +1,9 @@
+module Function (
+  myEven,
+  myAbs,
+  mySignum
+) where
+
 
 myEven :: Integral a => a -> Bool
 myEven n = n `mod` 2 == 0

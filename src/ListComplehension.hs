@@ -1,4 +1,7 @@
+module ListComplehension where
+
 import Data.Char
+
 -- list comprehension
 -- <- [range object]: generator
 x = [x ^ 2 | x <- [1..5]]

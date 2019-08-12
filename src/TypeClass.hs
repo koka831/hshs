@@ -1,3 +1,4 @@
+module TypeClass where
 {-
   f :: A -> B , e :: A / f e :: B
 -}
