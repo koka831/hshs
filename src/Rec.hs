@@ -41,3 +41,32 @@ myFac n | n > 0 = n * myFac (n - 1)
 sumdown :: Int -> Int
 sumdown 0 = 0
 sumdown n = n + sumdown (n - 1)
+
+-- 3.
+-- (^) :: Int -> Int
+-- n ^ 0 = 1
+-- n ^ k = n * (n ^ (k - 1))
+
+-- 4.
+euclid :: Int -> Int -> Int
+euclid x y | x == y = x
+           | x < y = euclid x (y - x)
+           | y < x = euclid (x - y) y
+
+-- 6.
+myAnd :: [Bool] -> Bool
+myAnd (x:xs) = x && myAnd xs
+
+myConcat :: [[a]] -> [a]
+myConcat (x:xs) = x ++ myConcat xs
+
+myReplicate :: Int -> a -> [a]
+myReplicate 0 a = [a]
+myReplicate n a = [a] ++ myReplicate (n - 1) a
+
+-- (!!) :: [a] -> Int -> a
+-- (!!) (x:_) 0 = x
+-- (!!) (x:xs) n = xs !! (n - 1)
+
+-- main = do
+  -- print (myReplicate 5 10)
