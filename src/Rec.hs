@@ -62,7 +62,7 @@ myConcat (x:xs) = x ++ myConcat xs
 
 myReplicate :: Int -> a -> [a]
 myReplicate 0 a = [a]
-myReplicate n a = [a] ++ myReplicate (n - 1) a
+myReplicate n a = a : myReplicate (n - 1) a
 
 -- (!!) :: [a] -> Int -> a
 -- (!!) (x:_) 0 = x
